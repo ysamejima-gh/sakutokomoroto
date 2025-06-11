@@ -1,0 +1,264 @@
+/* Landing Page Styles */
+
+.main {
+  font-family: var(--font-noto-sans, sans-serif);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('/hero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: var(--font-noto-serif, serif);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  writing-mode: vertical-rl;
+  font-family: var(--font-noto-sans, sans-serif);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.search {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.search input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-family: var(--font-noto-sans, sans-serif);
+}
+
+.tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-rl;
+  font-family: var(--font-noto-serif, serif);
+  font-size: 2.4rem;
+}
+
+.heroBottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goButton {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  font-family: var(--font-noto-serif, serif);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.character {
+  width: 120px;
+}
+
+.catch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #a2e5a2, #ffb6c1);
+  font-family: var(--font-noto-serif, serif);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.videos {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 20px;
+  background: #fafafa;
+}
+
+.videos::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/squirrel.png') center/contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.videoItem {
+  width: 48%;
+}
+
+.videoItem img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.gallery {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.galleryGrid {
+  display: flex;
+  gap: 8px;
+}
+
+.galleryGrid img {
+  width: 25%;
+  border-radius: 8px;
+}
+
+.gallery p {
+  margin-top: 16px;
+  font-family: var(--font-noto-sans, sans-serif);
+}
+
+.migration {
+  display: flex;
+  gap: 40px;
+  padding: 80px 20px;
+}
+
+.migrationText {
+  flex: 1;
+  font-family: var(--font-noto-sans, sans-serif);
+}
+
+.migrationPhoto {
+  flex: 1;
+}
+
+.migrationPhoto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.instagram {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.instagramGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.instagramGrid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.instagramDecoration {
+  position: relative;
+  margin-top: 40px;
+}
+
+.balloon {
+  width: 200px;
+}
+
+.person {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+}
+
+.footer {
+  padding: 80px 20px;
+  color: #fff;
+  background: url('/building.jpg') center/cover no-repeat;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLogo img {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .videos {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .videoItem {
+    width: 100%;
+  }
+  .migration {
+    flex-direction: column;
+  }
+  .galleryGrid {
+    flex-wrap: wrap;
+  }
+  .galleryGrid img {
+    width: 48%;
+  }
+  .instagramGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
