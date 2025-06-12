@@ -1,28 +1,30 @@
 /* Landing Page Styles */
-
+body {
+  background-color: #FFF3F0;
+}
 .main {
   font-family: var(--font-noto-sans, sans-serif);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-.hero {
-  position: relative;
+.hero_section {
+  /* position: relative; */
   min-height: 100vh;
-  background: url('/hero.jpg') center/cover no-repeat;
+  background-image: url('/public/メインビジュアル-桜.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   font-family: var(--font-noto-serif, serif);
 }
-
+/* 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-}
+} */
 
 .menu {
   position: absolute;
