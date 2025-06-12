@@ -9,25 +9,13 @@ body {
 }
 
 .hero_section {
-  /* position: relative; */
   min-height: 100vh;
-  /* Images stored in the `public` directory should be referenced from the
-     web root. Removing the `public` segment ensures the file can be
-     resolved correctly when the application is built. */
   background-image: url('/メインビジュアル-桜.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: #fff; */
   font-family: var(--font-noto-serif, serif);
 }
-/* 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-} */
 
 .menu {
   position: absolute;
