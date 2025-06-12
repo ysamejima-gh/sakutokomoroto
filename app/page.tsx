@@ -13,29 +13,48 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <header className={styles.header}>
+  <div className={styles.headerNav}>
+    <div className={styles.logo}>
+      <img src="/logo_piyomaru.png" alt="ロゴ" />
+      <h1>サクトコモロト</h1>
+    </div>
+    <nav className={styles.menu}>
+      <ul>
+        <li>サクとコモロのいいトコ</li>
+        <li>まちのムービー</li>
+        <li>まちへのトビラ</li>
+        <li>日常のかけら</li>
+        <li>暮らしてサクッと通信</li>
+        <li>#サクコモ日和</li>
+        <li>サクとコモロのヒトの声</li>
+        <li>ゲームでサクコモ体験</li>
+      </ul>
+      <div className={styles.snsIcons}>
+        <img src="/icon_instagram.svg" alt="Instagram" />
+        <img src="/icon_facebook.svg" alt="Facebook" />
+      </div>
+    </nav>
+  </div>
+</header>
       <main className={styles.main}>
         {/* Hero Section */}
-        <section className={styles.hero} id="home">
-          <nav className={styles.menu}>
-            <a href="#home">
-              <span className={styles.dot}></span>ホーム
-            </a>
-            <a href="#access">
-              <span className={styles.dot}></span>アクセス
-            </a>
-            <a href="#contact">
-              <span className={styles.dot}></span>お問い合わせ
-            </a>
-          </nav>
-          <div className={styles.search}>
-            <input type="text" placeholder="検索" />
-          </div>
-          <div className={styles.tagline}>小諸で、新しい生活。</div>
-          <div className={styles.heroBottom}>
-            <button className={styles.goButton}>GO!!</button>
-            <img src="/character.jpg" alt="キャラクター" className={styles.character} />
-          </div>
-        </section>
+        <section className={styles.hero}>
+  <div className={styles.background}>
+    {/* 背景画像はCSSで設定 */}
+  </div>
+
+  <div className={styles.catchCopy}>
+    <div className={styles.verticalText}>ここはきっと<br />わたしのまち。</div>
+    <div className={styles.verticalText}>風景・言葉・ものがたり。</div>
+    <div className={styles.verticalText}>歩いて、感じて、好きになる。</div>
+  </div>
+
+  <div className={styles.goButton}>
+    <p>GO！！</p>
+    <img src="/mascot.png" alt="ぴよ丸" />
+  </div>
+</section>Ï
 
         {/* Catch Copy */}
         <section className={styles.catch}>
