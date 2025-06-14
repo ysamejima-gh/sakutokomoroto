@@ -19,6 +19,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+
       <header className={styles.header}>
         <div className={styles.headerNav}>
           <div className={styles.logo}>
@@ -43,19 +44,18 @@ export default function Home() {
           </nav>
         </div>
       </header>
+
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero_section}>
-
           <div className={styles.catchCopy}>
-          <div className={styles.verticalText}>
+            <div className={styles.verticalText}>
               歩いて、感じて、好きになる。
             </div>
             <div className={styles.verticalText}>
               ここはきっと、わたしのまち。
             </div>
             <div className={styles.verticalText}>風景・言葉・ものがたり。</div>
-            
           </div>
 
           <div className={styles.goButton}>
@@ -67,8 +67,8 @@ export default function Home() {
         {/* ちょっと、深呼吸したくなったら。 */}
         <section className={styles.introSection}>
           <div className={styles.introSection_container}>
-              <h2 className={styles.h2_heading}>ちょっと、深呼吸したくなったら</h2>
-              <p className={styles.introSection_txt}>
+            <h2 className={styles.h2_heading}>ちょっと、深呼吸したくなったら</h2>
+            <p className={styles.introSection_txt}>
               東京から新幹線で、たった1時間ちょっと。<br />
               山に囲まれ、風が通り抜けるまち――佐久と小諸。<br />
               四季ごとに色を変える街路樹、古いものが愛おしく感じる路地裏。<br />
@@ -79,7 +79,7 @@ export default function Home() {
               小さなゲームや読みものを通して、そっと届けます。<br />
               忙しい日々の合間に、ふっと心がやわらぐ場所を探しているなら。<br />
               あなたの「次の旅のきっかけ」になれたら嬉しいです。
-              </p>
+            </p>
           </div>
         </section>
 
