@@ -1,6 +1,6 @@
-/* Landing Page Styles */
+/* 共通 */
 body {
-  background-color: #FFF3F0;
+  background-color: #fff3f0;
 }
 .main {
   font-family: var(--font-noto-sans, sans-serif);
@@ -8,30 +8,70 @@ body {
   overflow-x: hidden;
 }
 
+/* メインビジュアル */
 .hero_section {
+  width: 100vw;
   min-height: 100vh;
-  background-image: url('/メインビジュアル-桜.jpg');
+  background-image: url("/メインビジュアル-桜.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-noto-serif, serif);
 }
-
-.menu {
+.catchCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  writing-mode: vertical-rl;
+}
+.catchCopy > div {
+  width: 45px;
+  height: 306px;
+  background: rgba(245, 243, 239, 0.9);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #2e2e2e;
+}
+/* ヘッダー（サイドメニュー） */
+.header {
   position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  padding: 8px;
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4px);
-  writing-mode: vertical-rl;
   font-family: var(--font-noto-sans, sans-serif);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border-radius: 12px;
+  min-width: 294px;
+  padding: 16px;
+  z-index: 99;
 }
-
+.header .logo {
+  display: flex;
+  gap: 12px;
+}
+.header .gNav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.header .gNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+}
+.header .h1_heading {
+  font-size: 24px;
+}
 .menu a {
   color: #fff;
   text-decoration: none;
@@ -39,6 +79,29 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+/* ちょっと、深呼吸したくなったら。 */
+.introSection_container {
+  position: relative;
+  background-image: url(/public/小諸駅前.jpg);
+  padding: 80px 16px;
+}
+.introSection_container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105.05deg,
+    rgba(134, 201, 50, 0.8) -0.01%,
+    rgba(136, 210, 255, 0.72) 41.34%,
+    rgba(176, 215, 127, 0.8) 98.57%
+  );
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .dot {
@@ -117,10 +180,10 @@ body {
 }
 
 .videos::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: url('/squirrel.png') center/contain no-repeat;
+  background: url("/squirrel.png") center/contain no-repeat;
   opacity: 0.1;
   pointer-events: none;
 }
@@ -221,7 +284,7 @@ body {
 .footer {
   padding: 80px 20px;
   color: #fff;
-  background: url('/building.jpg') center/cover no-repeat;
+  background: url("/building.jpg") center/cover no-repeat;
 }
 
 .footerContent {

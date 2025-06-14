@@ -21,9 +21,9 @@ export default function Home() {
         <div className={styles.headerNav}>
           <div className={styles.logo}>
             <img src="/logo_piyomaru.png" alt="ロゴ" />
-            <h1>サクトコモロト</h1>
+            <h1 className={styles.h1_heading}>サクトコモロト</h1>
           </div>
-          <nav className={styles.menu}>
+          <nav className={styles.gNav}>
             <ul>
               <li>サクとコモロのいいトコ</li>
               <li>まちのムービー</li>
@@ -44,18 +44,16 @@ export default function Home() {
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero_section}>
-          <div className={styles.hero_container}>huiguygyug</div>
 
           <div className={styles.catchCopy}>
-            <div className={styles.verticalText}>
-              ここはきっと
-              <br />
-              わたしのまち。
-            </div>
-            <div className={styles.verticalText}>風景・言葉・ものがたり。</div>
-            <div className={styles.verticalText}>
+          <div className={styles.verticalText}>
               歩いて、感じて、好きになる。
             </div>
+            <div className={styles.verticalText}>
+              ここはきっと、わたしのまち。
+            </div>
+            <div className={styles.verticalText}>風景・言葉・ものがたり。</div>
+            
           </div>
 
           <div className={styles.goButton}>
@@ -64,9 +62,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Catch Copy */}
-        <section className={styles.catch}>
-          <p>ちょっと、夢をみてきたみたい。</p>
+        {/* ちょっと、深呼吸したくなったら。 */}
+        <section className={styles.introSection}>
+          <div className={styles.introSection_container}>
+              <h2 className={styles.h2_heading}>ちょっと、深呼吸したくなったら</h2>
+              <p className={styles.introSection_txt}>
+              東京から新幹線で、たった1時間ちょっと。<br />
+              山に囲まれ、風が通り抜けるまち――佐久と小諸。<br />
+              四季ごとに色を変える街路樹、古いものが愛おしく感じる路地裏。<br />
+              そして、そこに暮らす人たちの穏やかな笑顔。<br />
+              はじめて訪れたのに、どこか懐かしくて、<br />
+              写真を撮る手が止まらなくなるような風景に、何度も出会える。<br />
+              このサイトでは、そんな「サクトコモロ」の日常を、<br />
+              小さなゲームや読みものを通して、そっと届けます。<br />
+              忙しい日々の合間に、ふっと心がやわらぐ場所を探しているなら。<br />
+              あなたの「次の旅のきっかけ」になれたら嬉しいです。
+              </p>
+          </div>
         </section>
 
         {/* Video Section */}
