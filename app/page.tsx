@@ -1,3 +1,5 @@
+"use client";
+
 import Head from "next/head";
 import styles from "./Home.module.css";
 
