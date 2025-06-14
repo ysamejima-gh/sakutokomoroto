@@ -82,16 +82,41 @@ body {
 }
 
 /* ちょっと、深呼吸したくなったら。 */
-.introSection_container {
+.introSection {
   position: relative;
-  background-image: url(/public/小諸駅前.jpg);
-  padding: 80px 16px;
 }
-.introSection_container::before {
+.introSection::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
+  background-image: url(/葉.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.introSection_container {
+  position: relative;
+  background: url(/小諸駅前.jpg) center;
+  background-size: cover;
+  padding: 80px 16px;
+  z-index: 9;
+}
+.introSection_container::before,
+.introSection_container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.introSection_container::before {
   background: linear-gradient(
     105.05deg,
     rgba(134, 201, 50, 0.8) -0.01%,
@@ -99,222 +124,45 @@ body {
     rgba(176, 215, 127, 0.8) 98.57%
   );
   backdrop-filter: blur(10px);
-  position: absolute;
-  top: 0;
-  left: 0;
+  opacity: 0.8;
+  z-index: 99;
 }
-
-.dot {
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  border-radius: 50%;
-  display: inline-block;
+.introSection_container::after {
+  background: linear-gradient(
+    96.04deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(16px);
+  z-index: 100;
 }
-
-.search {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.search input {
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: none;
-  font-family: var(--font-noto-sans, sans-serif);
-}
-
-.tagline {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  writing-mode: vertical-rl;
-  font-family: var(--font-noto-serif, serif);
-  font-size: 2.4rem;
-}
-
-.heroBottom {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.introSection .introSection_txtArea {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.goButton {
-  padding: 8px 20px;
-  border: none;
-  border-radius: 4px;
-  background: #fff;
-  color: #333;
-  font-family: var(--font-noto-serif, serif);
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-.character {
-  width: 120px;
-}
-
-.catch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #a2e5a2, #ffb6c1);
-  font-family: var(--font-noto-serif, serif);
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-.videos {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 80px 20px;
-  background: #fafafa;
-}
-
-.videos::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/squirrel.png") center/contain no-repeat;
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-.videoItem {
-  width: 48%;
-}
-
-.videoItem img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.gallery {
-  padding: 80px 20px;
-  background: #f5f5f5;
-  text-align: center;
-}
-
-.galleryGrid {
-  display: flex;
-  gap: 8px;
-}
-
-.galleryGrid img {
-  width: 25%;
-  border-radius: 8px;
-}
-
-.gallery p {
-  margin-top: 16px;
-  font-family: var(--font-noto-sans, sans-serif);
-}
-
-.migration {
-  display: flex;
   gap: 40px;
-  padding: 80px 20px;
+  max-width: 530px;
+  margin: 0 auto;
 }
-
-.migrationText {
-  flex: 1;
-  font-family: var(--font-noto-sans, sans-serif);
-}
-
-.migrationPhoto {
-  flex: 1;
-}
-
-.migrationPhoto img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  background: #fff;
-  margin-top: 20px;
-}
-
-.instagram {
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.instagramGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.instagramGrid img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.instagramDecoration {
+.introSection h2,
+.introSection p {
   position: relative;
-  margin-top: 40px;
+  display: inline-block;
+  z-index: 999;
 }
-
-.balloon {
-  width: 200px;
+.introSection h2 {
+  font-size: 24px;
 }
-
-.person {
-  width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -20px;
-  right: 20px;
+.introSection p {
+  line-height: 2.75;
+  letter-spacing: .05em;
 }
-
-.footer {
-  padding: 80px 20px;
-  color: #fff;
-  background: url("/building.jpg") center/cover no-repeat;
-}
-
-.footerContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footerLogo img {
-  width: 120px;
-}
-
-@media (max-width: 768px) {
-  .videos {
-    flex-direction: column;
-    gap: 20px;
+@media (max-width: 1023px) {
+  .introSection::before {
+    background-image: url(/葉_sp.png);
   }
-  .videoItem {
-    width: 100%;
-  }
-  .migration {
-    flex-direction: column;
-  }
-  .galleryGrid {
-    flex-wrap: wrap;
-  }
-  .galleryGrid img {
-    width: 48%;
-  }
-  .instagramGrid {
-    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 599px) {
+  .introSection p br {
+    display: none;
   }
 }
