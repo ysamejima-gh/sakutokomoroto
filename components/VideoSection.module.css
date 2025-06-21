@@ -1,0 +1,31 @@
+.videos {
+  display: flex;
+  gap: 20px;
+  padding: 40px 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoItem {
+  flex: 1;
+  max-width: 500px;
+}
+
+.videoItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .videos {
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 16px;
+  }
+  
+  .videoItem {
+    max-width: 100%;
+  }
+}
