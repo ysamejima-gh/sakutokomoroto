@@ -1,29 +1,21 @@
 "use client";
 
-import Head from "next/head";
+import Image from "next/image";
 import styles from "./Home.module.css";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Komoro Landing Page</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
       <header className={styles.header}>
         <div className={styles.headerNav}>
           <div className={styles.logo}>
-            <img src="/logo_piyomaru.png" alt="ロゴ" />
+            <Image 
+              src="/logo_piyomaru.png" 
+              alt="ロゴ" 
+              width={40}
+              height={40}
+              priority
+            />
             <h1 className={styles.h1_heading}>サクトコモロト</h1>
           </div>
           <nav className={styles.gNav}>
@@ -38,8 +30,18 @@ export default function Home() {
               <li>ゲームでサクコモ体験</li>
             </ul>
             <div className={styles.snsIcons}>
-              <img src="/icon_instagram.svg" alt="Instagram" />
-              <img src="/icon_facebook.svg" alt="Facebook" />
+              <Image 
+                src="/icon_instagram.svg" 
+                alt="Instagram" 
+                width={24}
+                height={24}
+              />
+              <Image 
+                src="/icon_facebook.svg" 
+                alt="Facebook" 
+                width={24}
+                height={24}
+              />
             </div>
           </nav>
         </div>
@@ -60,7 +62,13 @@ export default function Home() {
 
           <div className={styles.goButton}>
             <p>GO！！</p>
-            <img src="/mascot.png" alt="ぴよ丸" />
+            <Image 
+              src="/mascot.png" 
+              alt="ぴよ丸" 
+              width={80}
+              height={80}
+              priority
+            />
           </div>
         </section>
 
@@ -99,20 +107,56 @@ export default function Home() {
         {/* Video Section */}
         <section className={styles.videos}>
           <div className={styles.videoItem}>
-            <img src="/video1.jpg" alt="動画1" />
+            <Image 
+              src="/video1.jpg" 
+              alt="動画1" 
+              width={400}
+              height={300}
+              loading="lazy"
+            />
           </div>
           <div className={styles.videoItem}>
-            <img src="/video2.jpg" alt="動画2" />
+            <Image 
+              src="/video2.jpg" 
+              alt="動画2" 
+              width={400}
+              height={300}
+              loading="lazy"
+            />
           </div>
         </section>
 
         {/* Seasons Gallery */}
         <section className={styles.gallery}>
           <div className={styles.galleryGrid}>
-            <img src="/spring.jpg" alt="春" />
-            <img src="/summer.jpg" alt="夏" />
-            <img src="/autumn.jpg" alt="秋" />
-            <img src="/winter.jpg" alt="冬" />
+            <Image 
+              src="/spring.jpg" 
+              alt="春" 
+              width={300}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/summer.jpg" 
+              alt="夏" 
+              width={300}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/autumn.jpg" 
+              alt="秋" 
+              width={300}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/winter.jpg" 
+              alt="冬" 
+              width={300}
+              height={200}
+              loading="lazy"
+            />
           </div>
           <p>四季折々の自然があなたを迎えます。</p>
         </section>
@@ -128,7 +172,13 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.migrationPhoto}>
-            <img src="/move.jpg" alt="移住" />
+            <Image 
+              src="/move.jpg" 
+              alt="移住" 
+              width={500}
+              height={400}
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -136,16 +186,66 @@ export default function Home() {
         <section className={styles.instagram}>
           <h2>Instagram</h2>
           <div className={styles.instagramGrid}>
-            <img src="/insta1.jpg" alt="insta1" />
-            <img src="/insta2.jpg" alt="insta2" />
-            <img src="/insta3.jpg" alt="insta3" />
-            <img src="/insta4.jpg" alt="insta4" />
-            <img src="/insta5.jpg" alt="insta5" />
-            <img src="/insta6.jpg" alt="insta6" />
+            <Image 
+              src="/insta1.jpg" 
+              alt="insta1" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/insta2.jpg" 
+              alt="insta2" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/insta3.jpg" 
+              alt="insta3" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/insta4.jpg" 
+              alt="insta4" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/insta5.jpg" 
+              alt="insta5" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/insta6.jpg" 
+              alt="insta6" 
+              width={200}
+              height={200}
+              loading="lazy"
+            />
           </div>
           <div className={styles.instagramDecoration}>
-            <img src="/balloon.jpg" className={styles.balloon} alt="気球" />
-            <img src="/person.jpg" className={styles.person} alt="人物" />
+            <Image 
+              src="/balloon.jpg" 
+              className={styles.balloon} 
+              alt="気球" 
+              width={150}
+              height={200}
+              loading="lazy"
+            />
+            <Image 
+              src="/person.jpg" 
+              className={styles.person} 
+              alt="人物" 
+              width={100}
+              height={150}
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -157,7 +257,13 @@ export default function Home() {
               <p>電話: 000-000-0000</p>
             </div>
             <div className={styles.footerLogo}>
-              <img src="/logo.png" alt="ロゴ" />
+              <Image 
+                src="/logo.png" 
+                alt="ロゴ" 
+                width={60}
+                height={40}
+                loading="lazy"
+              />
             </div>
           </div>
         </footer>
