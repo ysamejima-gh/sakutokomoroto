@@ -166,3 +166,122 @@ body {
     display: none;
   }
 }
+
+/* まちへのトビラ Section */
+.machiTobira {
+  padding: 80px 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 248, 240, 0.9) 0%,
+    rgba(240, 248, 255, 0.9) 100%
+  );
+  font-family: var(--font-noto-sans, sans-serif);
+}
+
+.machiTobiraContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.machiTobira .h2_heading {
+  text-align: center;
+  font-size: 32px;
+  color: #2e2e2e;
+  margin-bottom: 0;
+}
+
+.stationAreas {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.stationArea {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stationTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e2e2e;
+  text-align: center;
+}
+
+.stationDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+}
+
+.stationImage {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stationImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+  .stationAreas {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .machiTobira .h2_heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 599px) {
+  .machiTobira {
+    padding: 60px 16px;
+  }
+  
+  .machiTobiraContainer {
+    gap: 40px;
+  }
+  
+  .stationArea {
+    padding: 24px;
+  }
+  
+  .machiTobira .h2_heading {
+    font-size: 24px;
+  }
+  
+  .stationTitle {
+    font-size: 20px;
+  }
+  
+  .stationDescription {
+    font-size: 14px;
+  }
+  
+  .stationDescription br {
+    display: none;
+  }
+}
