@@ -1,42 +1,9 @@
-/* 共通 */
-body {
-  background-color: #fff3f0;
-}
 .main {
   font-family: var(--font-noto-sans, sans-serif);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* メインビジュアル */
-.hero_section {
-  width: 100vw;
-  min-height: 100vh;
-  background-image: url("/メインビジュアル-桜.jpg");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--font-noto-serif, serif);
-}
-.catchCopy {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  writing-mode: vertical-rl;
-}
-.catchCopy > div {
-  width: 45px;
-  height: 306px;
-  background: rgba(245, 243, 239, 0.9);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  color: #2e2e2e;
-}
 /* ヘッダー（サイドメニュー） */
 .header {
   position: absolute;
