@@ -106,6 +106,41 @@ export default function Home() {
           </div>
         </section>
 
+        {/* まちへのトビラ Section */}
+        <section className={styles.machiTobira}>
+          <div className={styles.machiTobiraContainer}>
+            <h2 className={styles.h2_heading}>あなたを迎える、まちへのトビラ</h2>
+            <div className={styles.stationAreas}>
+              <div className={styles.stationArea}>
+                <div className={styles.stationContent}>
+                  <h3 className={styles.stationTitle}>佐久平駅</h3>
+                  <p className={styles.stationDescription}>
+                    新幹線でアクセス抜群。<br />
+                    都心から約1時間で到着する、<br />
+                    佐久地域の玄関口。
+                  </p>
+                </div>
+                <div className={styles.stationImage}>
+                  <img src="/sakudaira-station.jpg" alt="佐久平駅" />
+                </div>
+              </div>
+              <div className={styles.stationArea}>
+                <div className={styles.stationContent}>
+                  <h3 className={styles.stationTitle}>小諸駅</h3>
+                  <p className={styles.stationDescription}>
+                    歴史ある城下町の中心地。<br />
+                    風情ある街並みと<br />
+                    温かな人々が迎えてくれる。
+                  </p>
+                </div>
+                <div className={styles.stationImage}>
+                  <img src="/komoro-station.jpg" alt="小諸駅" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Seasons Gallery */}
         <section className={styles.gallery}>
           <div className={styles.galleryGrid}>
