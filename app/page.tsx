@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "./Home.module.css";
 import Hero from "../components/Hero";
 import RelaxSection from "../components/RelaxSection";
+import GoodPointsSection from "../components/GoodPointsSection";
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
       <main className={styles.main}>
         <Hero />
         <RelaxSection />
+        <GoodPointsSection />
 
         {/* Video Section */}
         <section className={styles.videos}>
