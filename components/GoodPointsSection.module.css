@@ -10,12 +10,37 @@
   font-family: var(--font-noto-sans, sans-serif);
 }
 
-.goodPointsContainer {
+/* Header Area - Title and Subtitle */
+.headerArea {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.h2_heading {
+  font-size: 28px;
+  font-weight: 500;
+  color: #2e2e2e;
+  margin: 0 0 16px 0;
+  font-family: var(--font-noto-sans, sans-serif);
+}
+
+.subText {
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: #555;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Main Content Area - 2 Column Layout */
+.mainContentContainer {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 60px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .imageArea {
@@ -30,34 +55,25 @@
   border-radius: 16px;
 }
 
-.textArea {
+.bodyTextArea {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.h2_heading {
-  font-size: 28px;
-  font-weight: 500;
-  color: #2e2e2e;
-  margin: 0;
-  font-family: var(--font-noto-sans, sans-serif);
-}
-
-.subText {
+.bodyText {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.02em;
-  color: #555;
+  color: #333;
   margin: 0;
   font-weight: 400;
 }
 
-.buttonArea {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
+/* CTA Area */
+.ctaArea {
+  margin-top: 32px;
 }
 
 .exploreLink {
@@ -93,10 +109,9 @@
 
 /* Responsive Design */
 @media (max-width: 1023px) {
-  .goodPointsContainer {
+  .mainContentContainer {
     flex-direction: column;
     gap: 40px;
-    text-align: center;
   }
   
   .imageArea {
@@ -106,6 +121,14 @@
   .h2_heading {
     font-size: 24px;
   }
+  
+  .bodyTextArea {
+    text-align: left;
+  }
+  
+  .ctaArea {
+    text-align: center;
+  }
 }
 
 @media (max-width: 599px) {
@@ -113,7 +136,11 @@
     padding: 60px 16px;
   }
   
-  .goodPointsContainer {
+  .headerArea {
+    margin-bottom: 40px;
+  }
+  
+  .mainContentContainer {
     gap: 32px;
   }
   
@@ -130,8 +157,13 @@
     line-height: 1.7;
   }
   
-  .buttonArea {
-    margin-top: 40px;
+  .bodyText {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .ctaArea {
+    margin-top: 24px;
   }
   
   .linkText {
