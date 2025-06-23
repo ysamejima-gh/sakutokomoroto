@@ -12,27 +12,16 @@ export default function GoodPointsSection() {
           <h2 className={styles.h2_heading}>
             サクとコモロのいいトコ
           </h2>
-          <p className={styles.description}>
-            四季折々の美しい自然に囲まれた佐久と小諸。
-            <br />
-            歴史ある街並みと現代の暮らしが調和する、
-            <br />
-            心地よい時間が流れるまちです。
-            <br />
-            豊かな自然、温かな人々、そして美味しい食べ物。
-            <br />
-            ここには、あなたの「好き」がきっと見つかります。
-            <br />
-            新しい発見と出会いが待っている、
-            <br />
-            サクとコモロの魅力を感じてみませんか。
+          <p className={styles.subText}>
+            言葉にできない『いいな』が、ここにはたくさんあります。
           </p>
         </div>
       </div>
       <div className={styles.buttonArea}>
-        <button className={styles.exploreButton}>
-          サクとコモロをめぐる
-        </button>
+        <div className={styles.exploreLink}>
+          <span className={styles.linkText}>サクとコモロをめぐる</span>
+          <div className={styles.pinkCircle}></div>
+        </div>
       </div>
     </section>
   );
