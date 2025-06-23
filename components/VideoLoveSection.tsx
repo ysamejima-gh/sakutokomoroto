@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './VideoLoveSection.module.css';
 
 export default function VideoLoveSection() {
@@ -11,11 +10,16 @@ export default function VideoLoveSection() {
         <div className={styles.rabbitCenter}></div>
       </div>
       
-      {/* もみじ装飾 */}
+      {/* もみじ装飾 - 更新！ */}
       <div className={styles.mapleLeaves}>
-        <div className={styles.mapleLeaf}></div>
-        <div className={styles.mapleLeaf}></div>
-        <div className={styles.mapleLeaf}></div>
+        {[...Array(15)].map((_, i) => (
+          <img 
+            key={i} 
+            src="/もみじの葉っぱ 1.png" 
+            alt="" 
+            className={`${styles.mapleLeaf} ${styles[`mapleLeaf${i + 1}`]}`}
+          />
+        ))}
       </div>
 
       {/* メインコンテンツ */}

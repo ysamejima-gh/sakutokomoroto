@@ -3,118 +3,12 @@
   position: relative;
   min-height: 100vh;
   padding: 80px 16px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 248, 220, 1) 0%,
-    rgba(255, 235, 205, 1) 25%,
-    rgba(255, 220, 177, 1) 50%,
-    rgba(255, 206, 150, 1) 75%,
-    rgba(240, 180, 140, 1) 100%
-  );
+  background-image: url('/動画で恋する、サクとコモロ.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: var(--font-noto-sans, sans-serif);
   overflow: hidden;
-}
-
-/* 動物シルエット装飾 */
-.animalSilhouettes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.squirrelLeft {
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  width: 80px;
-  height: 100px;
-  background: rgba(120, 80, 60, 0.6);
-  clip-path: polygon(
-    30% 10%, 35% 5%, 45% 8%, 55% 15%, 65% 25%, 
-    70% 35%, 75% 50%, 70% 65%, 65% 75%, 
-    55% 85%, 45% 90%, 35% 85%, 25% 75%, 
-    20% 60%, 25% 45%, 30% 30%
-  );
-  border-radius: 50% 40% 60% 30%;
-}
-
-.squirrelRight {
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 120px;
-  height: 140px;
-  background: rgba(100, 70, 50, 0.5);
-  clip-path: polygon(
-    25% 15%, 35% 8%, 50% 5%, 65% 10%, 75% 20%, 
-    80% 35%, 85% 50%, 80% 65%, 70% 80%, 
-    55% 90%, 40% 85%, 25% 75%, 15% 60%, 
-    20% 40%, 25% 25%
-  );
-  border-radius: 40% 60% 50% 30%;
-}
-
-.rabbitCenter {
-  position: absolute;
-  top: 30%;
-  right: 25%;
-  width: 60px;
-  height: 80px;
-  background: rgba(110, 75, 55, 0.4);
-  clip-path: ellipse(40% 50% at 50% 60%);
-}
-
-/* もみじ装飾 */
-.mapleLeaves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.mapleLeaf {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: rgba(200, 100, 80, 0.6);
-  clip-path: polygon(
-    50% 0%, 60% 35%, 95% 35%, 70% 57%, 
-    80% 91%, 50% 70%, 20% 91%, 30% 57%, 
-    5% 35%, 40% 35%
-  );
-  animation: float 6s ease-in-out infinite;
-}
-
-.mapleLeaf:nth-child(1) {
-  top: 10%;
-  left: 85%;
-  animation-delay: 0s;
-}
-
-.mapleLeaf:nth-child(2) {
-  top: 25%;
-  right: 15%;
-  animation-delay: -2s;
-  transform: scale(0.8);
-}
-
-.mapleLeaf:nth-child(3) {
-  bottom: 30%;
-  left: 10%;
-  animation-delay: -4s;
-  transform: scale(1.2);
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
 }
 
 /* メインコンテンツ */
@@ -122,73 +16,49 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-areas: 
-    "title title"
-    "text cards";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 40px;
-  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   z-index: 2;
 }
 
 /* タイトルエリア */
 .titleArea {
-  grid-area: title;
-  text-align: left;
+  text-align: center;
 }
 
 .h2_heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #8B4513;
+  color: white;
   margin: 0;
   letter-spacing: 0.05em;
   line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* テキストエリア */
 .textArea {
-  grid-area: text;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 20px;
+  text-align: center;
 }
 
-.verticalTextContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 500px;
-}
-
-.verticalText {
-  font-size: 1rem;
+.mainText {
+  font-size: 1.1rem;
   line-height: 1.8;
-  color: #5D4037;
+  color: white;
   margin: 0;
   letter-spacing: 0.05em;
-  padding-left: 20px;
-  border-left: 2px solid rgba(139, 69, 19, 0.3);
-  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.verticalText:hover {
-  color: #3E2723;
-  border-left-color: rgba(139, 69, 19, 0.6);
-  transform: translateX(5px);
-}
-
-/* 動画カードエリア - 右下配置 */
+/* 動画カードエリア - 2カラム */
 .cardContainer {
-  grid-area: cards;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   justify-content: center;
-  align-items: flex-end;
-  padding-top: 80px;
 }
 
 .videoCard {
@@ -196,8 +66,6 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  flex: 1;
-  max-width: 450px;
 }
 
 .cardImage {
@@ -210,7 +78,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* 各カードの背景画像を個別指定 */
@@ -224,7 +92,7 @@
 
 .cardImage:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .cardOverlay {
@@ -264,113 +132,21 @@
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #8B4513;
+  color: white;
   text-align: center;
   letter-spacing: 0.1em;
-}
-
-/* 栗装飾 */
-.kuriDecorations {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.kuri {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: radial-gradient(circle at 30% 30%, #8B4513, #5D4037);
-  border-radius: 50% 50% 50% 80%;
-  transform: rotate(-45deg);
-  box-shadow: 
-    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
-    2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.kuri:nth-child(1) {
-  bottom: 10%;
-  left: 5%;
-}
-
-.kuri:nth-child(2) {
-  bottom: 15%;
-  right: 8%;
-}
-
-.kuri:nth-child(3) {
-  bottom: 5%;
-  right: 20%;
-}
-
-.kuri::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8px;
-  height: 8px;
-  background: #4A4A4A;
-  border-radius: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 1023px) {
-  .contentContainer {
-    grid-template-areas: 
-      "title"
-      "text"
-      "cards";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
-    gap: 40px;
-  }
-
-  .textArea {
-    justify-content: center;
-  }
-
-  .verticalTextContainer {
-    flex-direction: column;
-    gap: 16px;
-    min-height: auto;
-    max-width: 600px;
-  }
-
-  .verticalText {
-    padding-left: 20px;
-    border-left: 2px solid rgba(139, 69, 19, 0.3);
-    max-height: none;
-  }
-
-  .verticalText:hover {
-    transform: translateX(5px);
-  }
-
   .cardContainer {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    padding-top: 20px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .videoCard {
-    max-width: 100%;
-  }
-
-  .animalSilhouettes {
-    opacity: 0.7;
-  }
-
-  .squirrelLeft,
-  .squirrelRight,
-  .rabbitCenter {
-    transform: scale(0.8);
+  .h2_heading {
+    font-size: 2.2rem;
   }
 }
 
@@ -379,13 +155,16 @@
     padding: 60px 16px;
   }
 
-  .h2_heading {
-    font-size: 2rem;
+  .contentContainer {
+    gap: 40px;
   }
 
-  .verticalText {
-    font-size: 0.9rem;
-    padding-left: 15px;
+  .h2_heading {
+    font-size: 1.8rem;
+  }
+
+  .mainText {
+    font-size: 1rem;
   }
 
   .cardImage {
@@ -400,43 +179,188 @@
   .cardTitle {
     font-size: 1.25rem;
   }
-
-  .mapleLeaf {
-    width: 30px;
-    height: 30px;
-  }
-
-  .kuri {
-    width: 20px;
-    height: 20px;
-  }
-
-  .animalSilhouettes {
-    opacity: 0.5;
-  }
-
-  .squirrelLeft,
-  .squirrelRight,
-  .rabbitCenter {
-    transform: scale(0.6);
-  }
 }
 
 @media (max-width: 480px) {
   .h2_heading {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
-  .verticalText {
-    font-size: 0.85rem;
+  .mainText {
+    font-size: 0.9rem;
     line-height: 1.6;
   }
 
   .cardImage {
     height: 160px;
   }
+}
 
-  .animalSilhouettes {
-    display: none;
+/* もみじ装飾 */
+.mapleLeaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.mapleLeaf {
+  position: absolute;
+  opacity: 0.7;
+  animation: fallDown linear infinite;
+}
+
+/* 落下アニメーション */
+@keyframes fallDown {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
   }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 揺れながら落ちるアニメーション */
+@keyframes fallDownSwing {
+  0% {
+    transform: translateY(-100px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(25vh) translateX(20px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(15px) rotate(270deg);
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) translateX(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 各もみじの個別設定 */
+.mapleLeaf1 {
+  left: 5%;
+  width: 40px;
+  height: 40px;
+  animation: fallDown 8s 0s infinite;
+}
+
+.mapleLeaf2 {
+  left: 15%;
+  width: 25px;
+  height: 25px;
+  animation: fallDownSwing 10s 1s infinite;
+}
+
+.mapleLeaf3 {
+  left: 25%;
+  width: 35px;
+  height: 35px;
+  animation: fallDown 9s 2s infinite;
+}
+
+.mapleLeaf4 {
+  left: 35%;
+  width: 30px;
+  height: 30px;
+  animation: fallDownSwing 11s 0.5s infinite;
+}
+
+.mapleLeaf5 {
+  left: 45%;
+  width: 45px;
+  height: 45px;
+  animation: fallDown 7s 3s infinite;
+}
+
+.mapleLeaf6 {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  animation: fallDownSwing 12s 1.5s infinite;
+}
+
+.mapleLeaf7 {
+  left: 65%;
+  width: 38px;
+  height: 38px;
+  animation: fallDown 8.5s 4s infinite;
+}
+
+.mapleLeaf8 {
+  left: 75%;
+  width: 28px;
+  height: 28px;
+  animation: fallDownSwing 9.5s 2.5s infinite;
+}
+
+.mapleLeaf9 {
+  left: 85%;
+  width: 42px;
+  height: 42px;
+  animation: fallDown 10s 0s infinite;
+}
+
+.mapleLeaf10 {
+  left: 90%;
+  width: 22px;
+  height: 22px;
+  animation: fallDownSwing 11s 3.5s infinite;
+}
+
+.mapleLeaf11 {
+  left: 10%;
+  width: 55px;
+  height: 55px;
+  animation: fallDown 9s 5s infinite;
+}
+
+.mapleLeaf12 {
+  left: 30%;
+  width: 42px;
+  height: 42px;
+  animation: fallDownSwing 8s 4.5s infinite;
+}
+
+.mapleLeaf13 {
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  animation: fallDown 7.5s 6s infinite;
+}
+
+.mapleLeaf14 {
+  left: 70%;
+  width: 24px;
+  height: 24px;
+  animation: fallDownSwing 10.5s 5.5s infinite;
+}
+
+.mapleLeaf15 {
+  left: 95%;
+  width: 36px;
+  height: 36px;
+  animation: fallDown 9.5s 7s infinite;
 }

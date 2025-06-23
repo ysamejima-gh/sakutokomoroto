@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import RelaxSection from "../components/RelaxSection";
 import GoodPointsSection from "../components/GoodPointsSection";
 import VideoLoveSection from "../components/VideoLoveSection";
+import MachiTobiraSection from "@/components/MachiTobiraSection";
 
 export default function Home() {
   return (
@@ -53,9 +54,8 @@ export default function Home() {
         <Hero />
         <RelaxSection />
         <GoodPointsSection />
-
-        {/* Video Love Section */}
         <VideoLoveSection />
+        <MachiTobiraSection/>
 
         {/* まちへのトビラ Section */}
         <section className={styles.machiTobira}>
