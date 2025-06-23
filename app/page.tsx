@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 import Hero from "../components/Hero";
 import RelaxSection from "../components/RelaxSection";
 import GoodPointsSection from "../components/GoodPointsSection";
+import VideoLoveSection from "../components/VideoLoveSection";
 
 export default function Home() {
   return (
@@ -53,15 +54,8 @@ export default function Home() {
         <RelaxSection />
         <GoodPointsSection />
 
-        {/* Video Section */}
-        <section className={styles.videos}>
-          <div className={styles.videoItem}>
-            <img src="/video1.jpg" alt="動画1" />
-          </div>
-          <div className={styles.videoItem}>
-            <img src="/video2.jpg" alt="動画2" />
-          </div>
-        </section>
+        {/* Video Love Section */}
+        <VideoLoveSection />
 
         {/* まちへのトビラ Section */}
         <section className={styles.machiTobira}>
