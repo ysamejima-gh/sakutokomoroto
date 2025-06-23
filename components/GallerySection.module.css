@@ -1,239 +1,80 @@
-/* サクとコモロのいいトコ Section */
 .goodPointsSection {
   position: relative;
-  padding: 80px 16px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 182, 193, 0.3) 0%,
-    rgba(173, 255, 47, 0.2) 100%
-  );
-  font-family: var(--font-noto-sans, sans-serif);
-  overflow: hidden; /* コンテナからはみ出た葉を非表示に */
+  background-image: url("/ギャラリーセクション-背景.jpg");
+  background-size: cover;
 }
-
-/* Header Area - Title and Subtitle */
-.headerArea {
-  max-width: 1200px;
-  margin: 0 auto 60px auto;
-  text-align: center;
-}
-
-.h2_heading {
-  font-size: 28px;
-  font-weight: 500;
-  color: #2e2e2e;
-  margin: 0 0 16px 0;
-  font-family: var(--font-noto-sans, sans-serif);
-}
-
-.subText {
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  color: #555;
-  margin: 0;
-  font-weight: 400;
-}
-
-/* Main Content Area - 2 Column Layout */
-.mainContentContainer {
-  max-width: 1200px;
-  margin: 0 auto;
+.goodPointsSection_container {
   display: flex;
-  gap: 60px;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  min-height: 1140px;
 }
-
-.imageArea {
-  flex: 1;
-  max-width: 500px;
-}
-
-.imageArea img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.bodyTextArea {
-  flex: 1;
+.h2_heading {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.bodyText {
-  font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  color: #333;
-  margin: 0;
-  font-weight: 400;
-}
-
-/* CTA Area */
-.ctaArea {
-  margin-top: 32px;
-}
-
-.exploreLink {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.exploreLink:hover {
-  opacity: 0.8;
-}
-
-.linkText {
-  font-size: 16px;
-  color: #333;
+  gap: 16px;
+  font-family: "Kiwi Maru";
+  font-style: normal;
   font-weight: 500;
-  font-family: var(--font-noto-sans, sans-serif);
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  color: #d98666;
+  writing-mode: vertical-rl;
+  z-index: 999;
 }
-
-.pinkCircle {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-  border-radius: 50%;
-  transition: all 0.3s ease;
+.h2_heading span {
+  display: block;
 }
-
-.exploreLink:hover .pinkCircle {
-  transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 1023px) {
-  .mainContentContainer {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .imageArea {
-    max-width: 100%;
-  }
-  
-  .h2_heading {
-    font-size: 24px;
-  }
-  
-  .bodyTextArea {
-    text-align: left;
-  }
-  
-  .ctaArea {
-    text-align: center;
-  }
-}
-
-@media (max-width: 599px) {
-  .goodPointsSection {
-    padding: 60px 16px;
-  }
-  
-  .headerArea {
-    margin-bottom: 40px;
-  }
-  
-  .mainContentContainer {
-    gap: 32px;
-  }
-  
-  .imageArea img {
-    height: 250px;
-  }
-  
-  .h2_heading {
-    font-size: 22px;
-  }
-  
-  .subText {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  
-  .bodyText {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  
-  .ctaArea {
-    margin-top: 24px;
-  }
-  
-  .linkText {
-    font-size: 14px;
-  }
-  
-  .pinkCircle {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* --- ここから桜の花びらの装飾 --- */
-
-.petalContainer {
+.goodPointsSection img {
   position: absolute;
-  top: 0;
+}
+.rightTop {
+  top: 110px;
+  right: -8vw;
+  z-index: 10;
+}
+.leftTop {
+  top: 340px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0; /* コンテンツの背面に配置 */
+  z-index: 10;
+}
+.rightBottom {
+  bottom: 240px;
+  right: 4vw;
+  z-index: 10;
+}
+.leftBottom {
+  bottom: 180px;
+  left: 24vw;
+  z-index: 10;
+}
+.balloon1 {
+  top: -66px;
+    left: 8vw;
+}
+.balloon2 {
+  top: 17px;
+    left: 40vw;
+}
+.balloon3 {
+  top: 79px;
+    right: 6vw;
+}
+.balloon4 {
+  top: 230px;
+    left: 15vw;
+}
+.balloon5 {
+  bottom: 32%;
+    right: 7vw;
+}
+.balloon6 {
+  bottom: 32%;
+    left: 8vw;
+}
+.balloon7 {
+  bottom: 9%;
+    right: 29%;
 }
 
-.petal {
-  position: absolute;
-  top: -10%;
-  opacity: 0.8;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes fall {
-  from { top: -10%; }
-  to { top: 100%; }
-}
-
-/* 花びらが回転しながら揺れるアニメーション */
-@keyframes flutter {
-  0% {
-    transform: translateX(0) rotate(0deg);
-  }
-  50% {
-    transform: translateX(100px) rotate(180deg);
-  }
-  100% {
-    transform: translateX(-20px) rotate(360deg);
-  }
-}
-
-/* 花びらのバリエーション (20種類) - サイズを140px基準にスケールアップ */
-.petal1  { left: 5%; width: 62px; height: 62px; animation-duration: 15s, 7s; animation-delay: 0s; animation-name: fall, flutter; }
-.petal2  { left: 10%; width: 93px; height: 93px; animation-duration: 12s; animation-delay: -2s; }
-.petal3  { left: 15%; width: 78px; height: 78px; animation-duration: 18s, 8s; animation-delay: -4s; animation-name: fall, flutter; }
-.petal4  { left: 20%; width: 124px; height: 124px; animation-duration: 10s; animation-delay: -1s; }
-.petal5  { left: 25%; width: 62px; height: 62px; animation-duration: 20s, 10s; animation-delay: -8s; animation-name: fall, flutter; }
-.petal6  { left: 30%; width: 109px; height: 109px; animation-duration: 14s; animation-delay: -3s; }
-.petal7  { left: 35%; width: 68px; height: 68px; animation-duration: 17s, 6s; animation-delay: -7s; animation-name: fall, flutter; }
-.petal8  { left: 40%; width: 93px; height: 93px; animation-duration: 11s; animation-delay: -5s; }
-.petal9  { left: 45%; width: 87px; height: 87px; animation-duration: 16s, 9s; animation-delay: -9s; animation-name: fall, flutter; }
-.petal10 { left: 50%; width: 140px; height: 140px; animation-duration: 9s; animation-delay: -2s; }
-.petal11 { left: 55%; width: 62px; height: 62px; animation-duration: 19s, 7s; animation-delay: -11s; animation-name: fall, flutter; }
-.petal12 { left: 60%; width: 93px; height: 93px; animation-duration: 13s; animation-delay: -4s; }
-.petal13 { left: 65%; width: 78px; height: 78px; animation-duration: 15s, 8s; animation-delay: -6s; animation-name: fall, flutter; }
-.petal14 { left: 70%; width: 118px; height: 118px; animation-duration: 12s; animation-delay: -1s; }
-.petal15 { left: 75%; width: 68px; height: 68px; animation-duration: 18s, 10s; animation-delay: -9s; animation-name: fall, flutter; }
-.petal16 { left: 80%; width: 100px; height: 100px; animation-duration: 20s; animation-delay: -5s; }
-.petal17 { left: 85%; width: 87px; height: 87px; animation-duration: 14s, 6s; animation-delay: -8s; animation-name: fall, flutter; }
-.petal18 { left: 90%; width: 124px; height: 124px; animation-duration: 11s; animation-delay: -3s; }
-.petal19 { left: 95%; width: 78px; height: 78px; animation-duration: 16s, 9s; animation-delay: -12s; animation-name: fall, flutter; }
-.petal20 { left: 78%; width: 93px; height: 93px; animation-duration: 13s; animation-delay: -7s; }
