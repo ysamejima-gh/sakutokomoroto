@@ -32,10 +32,14 @@ export default function GoodPointsSection() {
           
           {/* CTA Link */}
           <div className={styles.ctaArea}>
-            <div className={styles.exploreLink}>
+            <button className={styles.exploreButton}>
               <span className={styles.linkText}>サクとコモロをめぐる</span>
-              <div className={styles.pinkCircle}></div>
-            </div>
+              <div className={styles.arrowIcon}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
       </div>
