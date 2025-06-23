@@ -4,6 +4,18 @@ import styles from './RelaxSection.module.css';
 export default function RelaxSection() {
   return (
     <section className={styles.introSection}>
+      {/* 夏の葉のアニメーションコンテナを追加 */}
+      <div className={styles.leafContainer}>
+        {[...Array(20)].map((_, i) => (
+          <img
+            key={i}
+            src="/夏の葉.png"
+            alt=""
+            className={`${styles.leaf} ${styles[`leaf${i + 1}`]}`}
+          />
+        ))}
+      </div>
+
       <div className={styles.introSection_container}>
         <div className={styles.introSection_txtArea}>
           <h2 className={styles.h2_heading}>

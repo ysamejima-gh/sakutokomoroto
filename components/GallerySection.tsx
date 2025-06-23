@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './GoodPointsSection.module.css';
+import styles from './GallerySection.module.css';
 
 export default function GoodPointsSection() {
   return (

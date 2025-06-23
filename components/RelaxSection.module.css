@@ -3,20 +3,6 @@
   position: relative;
 }
 
-.introSection::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(/葉.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
 .introSection_container {
   position: relative;
   background: url(/小諸駅前.jpg) center;
@@ -93,3 +79,65 @@
     display: none;
   }
 }
+
+/* --- ここから夏の葉の装飾 --- */
+
+.leafContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 101; /* オーバーレイの上に表示 */
+}
+
+.leaf {
+  position: absolute;
+  top: -10%;
+  opacity: 0.7;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  from { top: -10%; }
+  to { top: 100%; }
+}
+
+/* 葉がひらひら揺れるアニメーション */
+@keyframes flutter-leaf {
+  0% {
+    transform: translateX(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(60px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+}
+
+/* 夏の葉のバリエーション (20種類) - サイズを140px基準にスケールアップ */
+.leaf1  { left: 7%; width: 70px; height: 70px; animation-duration: 16s, 8s; animation-delay: -1s; animation-name: fall, flutter-leaf; }
+.leaf2  { left: 12%; width: 98px; height: 98px; animation-duration: 13s; animation-delay: -3s; }
+.leaf3  { left: 17%; width: 78px; height: 78px; animation-duration: 19s, 9s; animation-delay: -5s; animation-name: fall, flutter-leaf; }
+.leaf4  { left: 22%; width: 126px; height: 126px; animation-duration: 11s; animation-delay: -2s; }
+.leaf5  { left: 27%; width: 62px; height: 62px; animation-duration: 21s, 11s; animation-delay: -9s; animation-name: fall, flutter-leaf; }
+.leaf6  { left: 32%; width: 112px; height: 112px; animation-duration: 15s; animation-delay: -4s; }
+.leaf7  { left: 37%; width: 73px; height: 73px; animation-duration: 18s, 7s; animation-delay: -8s; animation-name: fall, flutter-leaf; }
+.leaf8  { left: 42%; width: 92px; height: 92px; animation-duration: 12s; animation-delay: -6s; }
+.leaf9  { left: 47%; width: 84px; height: 84px; animation-duration: 17s, 10s; animation-delay: -10s; animation-name: fall, flutter-leaf; }
+.leaf10 { left: 52%; width: 140px; height: 140px; animation-duration: 10s; animation-delay: -3s; }
+.leaf11 { left: 57%; width: 67px; height: 67px; animation-duration: 20s, 8s; animation-delay: -12s; animation-name: fall, flutter-leaf; }
+.leaf12 { left: 62%; width: 101px; height: 101px; animation-duration: 14s; animation-delay: -5s; }
+.leaf13 { left: 67%; width: 78px; height: 78px; animation-duration: 16s, 9s; animation-delay: -7s; animation-name: fall, flutter-leaf; }
+.leaf14 { left: 72%; width: 118px; height: 118px; animation-duration: 13s; animation-delay: -2s; }
+.leaf15 { left: 77%; width: 70px; height: 70px; animation-duration: 19s, 11s; animation-delay: -10s; animation-name: fall, flutter-leaf; }
+.leaf16 { left: 82%; width: 106px; height: 106px; animation-duration: 22s; animation-delay: -6s; }
+.leaf17 { left: 87%; width: 84px; height: 84px; animation-duration: 15s, 7s; animation-delay: -9s; animation-name: fall, flutter-leaf; }
+.leaf18 { left: 92%; width: 134px; height: 134px; animation-duration: 12s; animation-delay: -4s; }
+.leaf19 { left: 97%; width: 76px; height: 76px; animation-duration: 17s, 10s; animation-delay: -13s; animation-name: fall, flutter-leaf; }
+.leaf20 { left: 65%; width: 95px; height: 95px; animation-duration: 14s; animation-delay: -8s; }

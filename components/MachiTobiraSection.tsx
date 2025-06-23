@@ -3,6 +3,18 @@ import styles from './MachiTobiraSection.module.css';
 export default function MachiTobiraSection() {
   return (
     <section className={styles.machiTobiraSection}>
+      {/* 雪の装飾 */}
+      <div className={styles.snowContainer}>
+        {[...Array(20)].map((_, i) => (
+          <img
+            key={i}
+            src="/冬の結晶.png"
+            alt=""
+            className={`${styles.snowflake} ${styles[`snowflake${i + 1}`]}`}
+          />
+        ))}
+      </div>
+
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>あなたを迎える、まちへのトビラ</h2>
         
